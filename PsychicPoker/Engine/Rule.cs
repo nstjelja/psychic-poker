@@ -13,6 +13,23 @@ namespace PsychicPoker.Engine
         protected List<CardSuit> m_Suits = new List<CardSuit>() { 
                 CardSuit.Clubs, CardSuit.Diamonds, CardSuit.Hearts, CardSuit.Spades
             };
+
+        protected List<CardFaceValue> m_Faces = new List<CardFaceValue>() { 
+            CardFaceValue.Ace,
+            CardFaceValue.Two,
+            CardFaceValue.Three,
+            CardFaceValue.Four,
+            CardFaceValue.Five,
+            CardFaceValue.Six,
+            CardFaceValue.Seven,
+            CardFaceValue.Eight,
+            CardFaceValue.Nine,
+            CardFaceValue.Ten,
+            CardFaceValue.Jack,
+            CardFaceValue.Queen,
+            CardFaceValue.King
+            
+        };
         #endregion Members
 
         #region Abstract
@@ -57,6 +74,11 @@ namespace PsychicPoker.Engine
             }
 
             return areThey;
+        
+        }
+
+        protected int CalculateSecondaryRating(List<Card> cards) {
+           return (int)cards.Sum(x => (int)x.FaceValue);
         
         }
         #endregion Methods

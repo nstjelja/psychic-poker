@@ -57,7 +57,7 @@ namespace PsychicPoker.Engine.Rules
              var hand = new Hand();
              hand.Name = "Straight flush";
              hand.RankPrimary = 900;
-             hand.RankSecondry = (int)bestFlush.Sum(x => (int)x.FaceValue);
+             hand.RankSecondry = CalculateSecondaryRating(bestFlush);
              hand.Cards = bestFlush;
 
              return hand;
