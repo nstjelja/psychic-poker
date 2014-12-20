@@ -19,7 +19,7 @@ namespace PsychicPoker.Engine.Rules
                 if (cardsInSuite.Count < 5)
                     return;
 
-                var royalFlush = cardsInSuite.Where(x => x.FaceValue == CardFaceValue.Ten || x.FaceValue == CardFaceValue.Jack || x.FaceValue == CardFaceValue.Queen || x.FaceValue == CardFaceValue.King || x.FaceValue == CardFaceValue.HighAce).ToList();
+                var royalFlush = cardsInSuite.Where(x => x.FaceValue == CardFaceValue.Ten || x.FaceValue == CardFaceValue.Jack || x.FaceValue == CardFaceValue.Queen || x.FaceValue == CardFaceValue.King || x.FaceValue == CardFaceValue.Ace).ToList();
 
                 if (royalFlush.Count != 5)
                     return;

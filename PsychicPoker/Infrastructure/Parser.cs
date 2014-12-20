@@ -43,14 +43,7 @@ namespace PsychicPoker.Infrastructure
 
                 result.Add(card);
 
-                if (card.FaceValue == CardFaceValue.Ace) {
-                    var highAce = new Card() { 
-                        FaceValue = CardFaceValue.HighAce,
-                        Suit = card.Suit
-                    };
 
-                    result.Add(highAce);
-                }
             }
 
             return result;
