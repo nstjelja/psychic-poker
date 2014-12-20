@@ -36,7 +36,7 @@ namespace PsychicPoker.Engine.Rules
             var hand = new Hand();
             hand.Cards = handCardList;
             hand.Name = "Royal Flush";
-            hand.RankPrimary = 500;
+            hand.RankPrimary = 1000;
             hand.RankSecondry = 0;
 
             return hand;

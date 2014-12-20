@@ -8,7 +8,7 @@ using System.Linq;
 namespace PsychicPoker.Test.Engine.Rules
 {
     [TestClass]
-    public class RoyaFlushTest
+    public class RoyaFlushRuleTest
     {
         [TestMethod]
         public void CardList_Is_RoyalFlush()
@@ -31,7 +31,7 @@ namespace PsychicPoker.Test.Engine.Rules
 
             Assert.IsNotNull(hand);
             Assert.AreEqual("Royal Flush", hand.Name);
-            Assert.AreEqual(500, hand.RankPrimary);
+            Assert.AreEqual(1000, hand.RankPrimary);
 
             Assert.IsTrue( hand.Cards.All(x => x.Suit == CardSuit.Hearts));
             Assert.IsTrue( hand.Cards.Any( x=> x.FaceValue == CardFaceValue.Ten));

@@ -16,7 +16,7 @@ namespace PsychicPoker.Test
 
             Assert.AreEqual(9, cards.Count);
 
-            Assert.AreEqual(10, cards[0].Count);
+            Assert.AreEqual(11, cards[0].Count);
         }
     }
 }

@@ -48,11 +48,11 @@
   <ItemGroup>
     <Compile Include="Domain\Card.cs" />
     <Compile Include="Domain\CardFaceValue.cs" />
-    <Compile Include="Domain\CardSet.cs" />
     <Compile Include="Domain\CardSuit.cs" />
     <Compile Include="Domain\Hand.cs" />
     <Compile Include="Engine\Rule.cs" />
     <Compile Include="Engine\Rules\RoyalFlush.cs" />
+    <Compile Include="Engine\Rules\StraightFlushRule.cs" />
     <Compile Include="Infrastructure\Parser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

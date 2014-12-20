@@ -55,7 +55,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Engine\Rules\RoyaFlushTest.cs" />
+    <Compile Include="Engine\Rules\RoyaFlushRuleTest.cs" />
+    <Compile Include="Engine\Rules\StraightFlushRuleTest.cs" />
     <Compile Include="Infrastructure\ParserTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

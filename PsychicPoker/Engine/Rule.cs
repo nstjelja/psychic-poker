@@ -33,6 +33,32 @@ namespace PsychicPoker.Engine
             return ordering;
         
         }
+
+        protected bool AreCardsInSequence(List<Card> cards) {
+            bool areThey = true;
+
+            for (var i = 0; i < cards.Count; i++) {
+                if (areThey == false)
+                    break;
+
+                if (i == 0)
+                    continue;
+
+                var current = (int) cards[i].FaceValue;
+
+                var previous = (int)cards[i-1].FaceValue;
+
+                if ((current - previous) == 1)
+                    continue;
+
+                areThey = false;
+                break;
+               
+            }
+
+            return areThey;
+        
+        }
         #endregion Methods
     }
 }

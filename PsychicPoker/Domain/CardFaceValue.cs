@@ -41,6 +41,6 @@ namespace PsychicPoker.Domain
         Jack,
         Queen, 
         King,
-        
+        HighAce,
     }
 }
