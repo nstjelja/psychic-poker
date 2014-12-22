@@ -29,10 +29,16 @@ namespace PsychicPoker.Engine.Rules
             if (best == null)
                 return null;
 
+            var face = best.FirstOrDefault().FaceValue;
+
+           var bestOtherCard = cards.Where(x => x.FaceValue != face).OrderByDescending(x => (int)x.FaceValue).FirstOrDefault();
+
+           best.Add(bestOtherCard);
+
             var hand = new Hand();
             hand.Name = "Four of kind";
             hand.RankPrimary = 800;
-            hand.RankSecondry = CalculateSecondaryRating(best);
+            hand.RankSecondry = (int)bestOtherCard.FaceValue;
             hand.Cards = best;
 
             return hand;
