@@ -44,6 +44,37 @@ namespace PsychicPoker.Engine
             return cardsInSuit;
         }
 
+        protected Tuple<List<Card>,int> BestOrderedCardList(List<Card> cards) {
+            var orderedCollection = OrderCardListBasedOnSuitValue(cards);
+
+
+            var pages = Math.Ceiling((double)orderedCollection.Count / 5);
+
+            var sequences = new List<List<Card>>();
+
+            for (var currentPage = 0; currentPage < pages; currentPage++)
+            {
+                var page = orderedCollection.Take(5).Skip(currentPage * 5).ToList();
+                var areThey = AreCardsInSequence(page);
+
+                if (!areThey)
+                    continue;
+
+                sequences.Add(page);
+            }
+
+
+
+            var lastSequence = sequences.LastOrDefault();
+
+            if (lastSequence == null)
+                return null;
+
+            var value = (int)lastSequence.Sum(x => (decimal)x.FaceValue);
+
+            return new Tuple<List<Card>,int>(lastSequence, value);
+        }
+
         protected List<Card> OrderCardListBasedOnSuitValue(List<Card> cards)
         {
             var ordering = cards.OrderBy(card => (int)card.FaceValue).ToList();
