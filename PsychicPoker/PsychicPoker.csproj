@@ -51,7 +51,9 @@
     <Compile Include="Domain\CardSuit.cs" />
     <Compile Include="Domain\Hand.cs" />
     <Compile Include="Engine\Rule.cs" />
+    <Compile Include="Engine\Rules\FlushRule.cs" />
     <Compile Include="Engine\Rules\FourOfAKindRule.cs" />
+    <Compile Include="Engine\Rules\FullHouseRule.cs" />
     <Compile Include="Engine\Rules\RoyalFlush.cs" />
     <Compile Include="Engine\Rules\StraightFlushRule.cs" />
     <Compile Include="Infrastructure\Parser.cs" />

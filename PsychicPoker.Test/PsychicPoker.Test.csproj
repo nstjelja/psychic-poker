@@ -58,6 +58,8 @@
     <Compile Include="Engine\Rules\RoyaFlushRuleTest.cs" />
     <Compile Include="Engine\Rules\StraightFlushRuleTest.cs" />
     <Compile Include="Engine\Rules\FourOfKindTest.cs" />
+    <Compile Include="Engine\Rules\FullHouseTest.cs" />
+    <Compile Include="Engine\Rules\FlushTest.cs" />
     <Compile Include="Infrastructure\ParserTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

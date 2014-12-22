@@ -27,7 +27,8 @@ namespace PsychicPoker.Engine
             CardFaceValue.Ten,
             CardFaceValue.Jack,
             CardFaceValue.Queen,
-            CardFaceValue.King
+            CardFaceValue.King,
+            CardFaceValue.HighAce
             
         };
         #endregion Members
@@ -80,6 +81,27 @@ namespace PsychicPoker.Engine
         protected int CalculateSecondaryRating(List<Card> cards) {
            return (int)cards.Sum(x => (int)x.FaceValue);
         
+        }
+
+        protected Tuple<List<Card>, int> BestCardsSameFaceAndScore(List<Card> cards, int number) {
+            var result = new Dictionary<List<Card>,int>();
+            m_Faces.ForEach(faceValue =>
+            {
+                var sameFaceValue = cards.Where(x => x.FaceValue == faceValue).ToList();
+
+                if (sameFaceValue.Count != number)
+                    return;
+
+                result.Add(sameFaceValue, CalculateSecondaryRating(sameFaceValue));
+
+            });
+
+            var best = result.OrderByDescending(x => x.Value).FirstOrDefault();
+
+            if (best.Key == null)
+                return null;
+
+            return new Tuple<List<Card>, int>(best.Key, best.Value);
         }
         #endregion Methods
     }

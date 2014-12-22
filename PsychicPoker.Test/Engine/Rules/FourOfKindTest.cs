@@ -23,7 +23,8 @@ namespace PsychicPoker.Test.Engine.Rules
                 new Card(){FaceValue = CardFaceValue.Ten,Suit = CardSuit.Hearts },
                 new Card(){FaceValue = CardFaceValue.Four,Suit = CardSuit.Hearts },
                 new Card(){FaceValue = CardFaceValue.Queen,Suit = CardSuit.Hearts },
-                new Card(){FaceValue = CardFaceValue.King,Suit = CardSuit.Hearts }
+                new Card(){FaceValue = CardFaceValue.King,Suit = CardSuit.Hearts },
+                 new Card(){FaceValue = CardFaceValue.HighAce,Suit = CardSuit.Hearts }
             };
 
             var rule = new FourOfAKindRule();
@@ -32,7 +33,7 @@ namespace PsychicPoker.Test.Engine.Rules
             Assert.IsNotNull(hand);
             Assert.AreEqual("Four of kind", hand.Name);
             Assert.AreEqual(800, hand.RankPrimary);
-            Assert.AreEqual(13, hand.RankSecondry);
+            Assert.AreEqual(14, hand.RankSecondry);
 
         
             Assert.IsTrue(hand.Cards.Any(x => x.FaceValue == CardFaceValue.Jack));
