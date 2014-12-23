@@ -57,6 +57,7 @@
     <Compile Include="Engine\Rules\RoyalFlush.cs" />
     <Compile Include="Engine\Rules\StraightFlushRule.cs" />
     <Compile Include="Engine\Rules\StraightRule.cs" />
+    <Compile Include="Engine\Rules\ThreeOfAKindRule.cs" />
     <Compile Include="Infrastructure\Parser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

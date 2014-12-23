@@ -61,6 +61,7 @@
     <Compile Include="Engine\Rules\FullHouseTest.cs" />
     <Compile Include="Engine\Rules\FlushTest.cs" />
     <Compile Include="Engine\Rules\StraightTest.cs" />
+    <Compile Include="Engine\Rules\ThreeOfAKindTest.cs" />
     <Compile Include="Infrastructure\ParserTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

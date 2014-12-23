@@ -84,6 +84,9 @@ namespace PsychicPoker.Engine
         }
 
         protected bool AreCardsInSequence(List<Card> cards) {
+            if (cards == null || cards.Count == 0)
+                return false;
+
             bool areThey = true;
 
             for (var i = 0; i < cards.Count; i++) {
