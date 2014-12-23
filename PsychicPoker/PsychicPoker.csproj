@@ -50,10 +50,12 @@
     <Compile Include="Domain\CardFaceValue.cs" />
     <Compile Include="Domain\CardSuit.cs" />
     <Compile Include="Domain\Hand.cs" />
+    <Compile Include="Engine\Rules\HighCardRule.cs" />
     <Compile Include="Engine\Rule.cs" />
     <Compile Include="Engine\Rules\FlushRule.cs" />
     <Compile Include="Engine\Rules\FourOfAKindRule.cs" />
     <Compile Include="Engine\Rules\FullHouseRule.cs" />
+    <Compile Include="Engine\Rules\OnePairRule.cs" />
     <Compile Include="Engine\Rules\RoyalFlush.cs" />
     <Compile Include="Engine\Rules\StraightFlushRule.cs" />
     <Compile Include="Engine\Rules\StraightRule.cs" />

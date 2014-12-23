@@ -55,6 +55,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Engine\Rules\HighCardRuleTest.cs" />
     <Compile Include="Engine\Rules\RoyaFlushRuleTest.cs" />
     <Compile Include="Engine\Rules\StraightFlushRuleTest.cs" />
     <Compile Include="Engine\Rules\FourOfKindTest.cs" />
@@ -62,8 +63,8 @@
     <Compile Include="Engine\Rules\FlushTest.cs" />
     <Compile Include="Engine\Rules\StraightTest.cs" />
     <Compile Include="Engine\Rules\ThreeOfAKindTest.cs" />
-    <Compile Include="Engine\Rules\TwoPairRule.cs" />
     <Compile Include="Engine\Rules\TwoPairRuleTest.cs" />
+    <Compile Include="Engine\Rules\OnePairRuleTest.cs" />
     <Compile Include="Infrastructure\ParserTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
