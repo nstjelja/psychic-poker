@@ -11,6 +11,21 @@ namespace PsychicPoker.Domain
         #region Properties
         public CardFaceValue FaceValue { get; set; }
         public CardSuit Suit { get; set; }
+        public string ShortHandName {
+            get {
+                var suitShortHand = Suit.ToString()[0].ToString();
+
+                var faceIntValue = (int)FaceValue;
+
+                if (faceIntValue >= 2 && faceIntValue <= 9) {
+                    return String.Format("{0}{1}", faceIntValue, suitShortHand);
+                }
+
+                var faceShortHand = FaceValue.ToString()[0].ToString();
+
+                return String.Format("{0}{1}", faceShortHand, suitShortHand);
+            }
+        }
         #endregion Properties
 
         #region Methods

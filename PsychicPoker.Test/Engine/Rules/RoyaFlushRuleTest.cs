@@ -26,7 +26,7 @@ namespace PsychicPoker.Test.Engine.Rules
                 new Card(){FaceValue = CardFaceValue.King,Suit = CardSuit.Hearts }
             };
 
-            var rule = new RoyalFlush();
+            var rule = new RoyalFlushRule();
             var hand = rule.BuildStrongestHand(cardList);
 
             Assert.IsNotNull(hand);
@@ -57,7 +57,7 @@ namespace PsychicPoker.Test.Engine.Rules
                 new Card(){FaceValue = CardFaceValue.King,Suit = CardSuit.Diamonds }
             };
 
-            var rule = new RoyalFlush();
+            var rule = new RoyalFlushRule();
             var hand = rule.BuildStrongestHand(cardList);
 
             Assert.IsNull(hand);

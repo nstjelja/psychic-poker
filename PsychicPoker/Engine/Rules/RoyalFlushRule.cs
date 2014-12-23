@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PsychicPoker.Engine.Rules
 {
-    public class RoyalFlush : Rule
+    public class RoyalFlushRule : Rule
     {
         public override Domain.Hand BuildStrongestHand(List<Card> cards)
         {

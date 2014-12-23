@@ -13,6 +13,10 @@ namespace PsychicPoker.Domain
         public string Name { get; set; }
         public int RankPrimary { get; set; }
         public int RankSecondry { get; set; }
+        public int TotalRank
+        {
+            get { return RankPrimary + RankSecondry; }
+        }
         #endregion Properties
     }
 }

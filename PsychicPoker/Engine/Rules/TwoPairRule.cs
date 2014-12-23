@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PsychicPoker.Test.Engine.Rules
+namespace PsychicPoker.Engine.Rules
 {
     public class TwoPairRule : Rule
     {
